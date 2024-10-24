@@ -1,3 +1,54 @@
 @charset "UTF-8";
 
-/* Header */
+/* Menu de pesquisa */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 2rem;
+  background-color: var(--primary-color);
+}
+
+#logo-name {
+  font-family: var(--secondary-font);
+  font-size: 2.3rem;
+  color: var(--white-color);
+}
+
+#logo {
+  margin-right: 0.82rem;
+}
+
+.search-container {
+  width: 50%;
+  font-family: var(--primary-font);
+  display: flex;
+  gap: 2rem;
+  color: white;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+#movie-name {
+  width: 40rem;
+}
+
+#movie-name,
+#movie-year {
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.52rem 0.65rem;
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+}
+
+/* Conteúdo principal */
+main {
+  height: 100vh;
+  background-color: var(--bg-color);
+}

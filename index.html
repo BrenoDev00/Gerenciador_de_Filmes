@@ -30,20 +30,28 @@
     <link rel="stylesheet" href="/SRC/CSS/style.css" />
   </head>
   <body>
+    <!-- Menu de pesquisa -->
     <header>
-      <p><i class="bi bi-film"></i>MyMovies</p>
+      <p id="logo-name"><i class="bi bi-film" id="logo"></i>My Movies</p>
 
-      <div class="input-wrapper">
-        <label for="movie-name">Nome do Filme:</label>
-        <input type="text" id="movie-name" />
-      </div>
+      <section class="search-container">
+        <div class="input-wrapper">
+          <label for="movie-name">Nome</label>
+          <input type="text" id="movie-name" placeholder="Nome do Filme" />
+        </div>
 
-      <div class="input-wrapper">
-        <label for="movie-year">Ano do Filme:</label>
-        <input type="text" id="movie-year" />
-      </div>
+        <div class="input-wrapper">
+          <label for="movie-year">Ano</label>
+          <input type="number" id="movie-year" placeholder="Ano do Filme" />
+        </div>
 
-      <button type="button"><i class="bi bi-search"></i></button>
+        <button type="button">
+          <i class="bi bi-search"></i>
+        </button>
+      </section>
     </header>
+
+    <!-- Conteúdo principal -->
+    <main></main>
   </body>
 </html>
