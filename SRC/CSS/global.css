@@ -17,3 +17,12 @@ html {
 body {
   font-size: 2rem;
 }
+
+:root {
+  --primary-color: #b1060f;
+  --bg-color: #121212;
+  --white-color: #ffffff;
+
+  --primary-font: "PT Sans", sans-serif;
+  --secondary-font: "Bebas Neue", sans-serif;
+}
