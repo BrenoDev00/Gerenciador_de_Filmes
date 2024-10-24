@@ -47,6 +47,16 @@ header {
   color: var(--white-color);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /* Conteúdo principal */
 main {
   height: 100vh;
