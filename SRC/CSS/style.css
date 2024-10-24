@@ -20,8 +20,7 @@ header {
 }
 
 .search-container {
-  width: 50%;
-  font-family: var(--primary-font);
+  margin-right: 5rem;
   display: flex;
   gap: 2rem;
   color: white;
@@ -74,4 +73,10 @@ input[type="number"] {
 main {
   height: 100vh;
   background-color: var(--bg-color);
+}
+
+.main-title {
+  color: var(--primary-color);
+  text-align: center;
+  padding-top: 3.12rem;
 }
