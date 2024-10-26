@@ -104,6 +104,53 @@ main {
 .modal-container {
   z-index: 1;
   background-color: var(--white-color);
-  padding: 1.2rem 3.12rem;
+  padding: 1.2rem 3.12rem 2.4rem 3.12rem;
   border-radius: 0.3rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.movie-title {
+  text-align: center;
+  padding: 1.2rem 0;
+}
+
+.modal-body {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.movie-poster {
+  border-radius: 0.3rem;
+}
+
+.movie-info {
+  max-width: 30rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.text-highlighting {
+  font-weight: bold;
+}
+
+.modal-footer {
+  margin-top: 1.2rem;
+}
+
+#add-movie-button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  border: 0.2rem solid var(--primary-color);
+  width: 100%;
+  padding: 0.27rem 0;
+  transition: 0.2s;
+}
+
+#add-movie-button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
