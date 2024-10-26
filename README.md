@@ -1,4 +1,4 @@
-# 🎞️ My Films - Gerenciador de playlist de filmes
+# 🎞️ My Films - Gerenciador de playlist de filmes (em andamento)
 ## Descrição
 - App responsável por gerenciar informações de filmes pesquisados pelo usuário. Por meio do app, é possível adicionar ou remover informações de filmes para gerenciar uma playlist personalizada.
 ## Tecnologias utilizadas
