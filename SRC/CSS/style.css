@@ -154,3 +154,14 @@ main {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
+
+/* Rodapé */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.82rem 0;
+}
+
+footer p {
+  text-align: center;
+}
