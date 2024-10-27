@@ -91,6 +91,18 @@ main {
   justify-content: center;
   align-items: center;
   color: var(--primary-color);
+  visibility: hidden;
+}
+
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal-background {
