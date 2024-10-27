@@ -56,6 +56,12 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+#movie-name:focus,
+#movie-year:focus,
+#search-button:focus {
+  border: 0.2rem solid var(--white-color);
+}
+
 #search-button {
   all: unset;
   cursor: pointer;
