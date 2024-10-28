@@ -3,10 +3,17 @@ const modalOverlay = document.querySelector(".modal-overlay");
 const movieName = document.getElementById("movie-name");
 const movieYear = document.getElementById("movie-year");
 
-function searchButtonClickHandler() {
+async function searchButtonClickHandler() {
   modalOverlay.classList.add("open");
-  console.log(movieName.value.split(" ").join("+"));
-  console.log("Ano: ", movieYear.value);
+
+  let url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${movieName.value
+    .split(" ")
+    .join("+")}`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+  console.log(data);
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
