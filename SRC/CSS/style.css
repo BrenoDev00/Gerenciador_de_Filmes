@@ -82,6 +82,7 @@ main {
 }
 
 .main-title {
+  font-size: 3.12rem;
   color: var(--primary-color);
   text-align: center;
   padding-top: 3.12rem;

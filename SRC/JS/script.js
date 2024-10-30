@@ -22,11 +22,11 @@ function showMovieModal(data) {
       </p>
 
       <p class="movie-cast">
-        ${data.Actors}
+        <span class="text-highlighting">Actors</span>: ${data.Actors}
       </p>
 
       <p class="movie-genre">
-        <span class="text-highlighting">Gênero</span>: ${data.Genre}
+        <span class="text-highlighting">Genre</span>: ${data.Genre}
       </p>
     </div>
   </section>
