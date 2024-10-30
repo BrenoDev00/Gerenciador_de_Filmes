@@ -76,11 +76,6 @@ input[type="number"] {
 }
 
 /* Conteúdo principal */
-main {
-  height: 100vh;
-  background-color: var(--bg-color);
-}
-
 .main-title {
   font-size: 3.12rem;
   color: var(--primary-color);
@@ -89,7 +84,9 @@ main {
 }
 
 .movie-list {
-  margin-top: 1.6rem;
+  max-width: 125rem;
+  margin: 0 auto;
+  margin-top: 1.8rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -211,6 +208,7 @@ main {
 
 /* Rodapé */
 footer {
+  margin-top: 3.12rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   padding: 0.82rem 0;
