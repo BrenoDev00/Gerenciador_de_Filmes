@@ -88,6 +88,41 @@ main {
   padding-top: 3.12rem;
 }
 
+.movie-list {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.movie-list article {
+  display: flex;
+  flex-flow: column;
+  gap: 0.82rem;
+}
+
+.movie-list img {
+  border-radius: 0.3rem;
+  border: 0.1rem solid var(--white-color);
+}
+
+.remove-movie-button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+  border: 0.1rem solid var(--primary-color);
+  padding: 0.27rem 0;
+  transition: 0.2s;
+  color: var(--primary-color);
+}
+
+.remove-movie-button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;

@@ -13,7 +13,7 @@ function showMovieModal(data) {
     <img
       class="movie-poster"
       src=${data.Poster}
-      alt="Poster do filme pesquisado"
+      alt="Poster do filme pesquisado."
     />
 
     <div class="movie-info">
