@@ -1,26 +1,41 @@
-const searchButton = document.getElementById("search-button");
-const modalOverlay = document.querySelector(".modal-overlay");
 const movieName = document.getElementById("movie-name");
 const movieYear = document.getElementById("movie-year");
+const modalOverlay = document.querySelector(".modal-overlay");
+const modalContainer = document.querySelector(".modal-container");
+const searchButton = document.getElementById("search-button");
 const apiKey = "649a4725";
 
-async function searchButtonClickHandler() {
-  try {
-    modalOverlay.classList.add("open");
+function showMovieModal(data) {
+  modalContainer.innerHTML = `
+  <h2 class="movie-title">${data.Title} - ${data.Year}</h2>
 
-    let url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${movieNameParameterGenerator()}&y=${movieYearParameterGenerator()}`;
+  <section class="modal-body">
+    <img
+      class="movie-poster"
+      src=${data.Poster}
+      alt="Poster do filme pesquisado"
+    />
 
-    const response = await fetch(url);
-    const data = await response.json();
+    <div class="movie-info">
+      <p class="movie-plot">
+        ${data.Plot}
+      </p>
 
-    console.log(data);
+      <p class="movie-cast">
+        ${data.Actors}
+      </p>
 
-    if (data.Error) {
-      throw new Error("Filme não encontrado");
-    }
-  } catch (error) {
-    notie.alert({ text: error.message, type: "error" });
-  }
+      <p class="movie-genre">
+        <span class="text-highlighting">Gênero</span>: ${data.Genre}
+      </p>
+    </div>
+  </section>
+
+  <section class="modal-footer">
+    <button type="button" id="add-movie-button">
+      Adicionar à Lista
+    </button>
+  </section>`;
 }
 
 function movieNameParameterGenerator() {
@@ -40,6 +55,24 @@ function movieYearParameterGenerator() {
   }
 
   return `&y=${movieYear.value}`;
+}
+
+async function searchButtonClickHandler() {
+  try {
+    let url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${movieNameParameterGenerator()}&y=${movieYearParameterGenerator()}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (data.Error) {
+      throw new Error("Filme não encontrado");
+    }
+
+    showMovieModal(data);
+    modalOverlay.classList.add("open");
+  } catch (error) {
+    notie.alert({ text: error.message, type: "error" });
+  }
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
