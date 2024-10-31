@@ -3,6 +3,7 @@ const movieYear = document.getElementById("movie-year");
 const modalOverlay = document.querySelector(".modal-overlay");
 const modalContainer = document.querySelector(".modal-container");
 const searchButton = document.getElementById("search-button");
+const movieListContainer = document.querySelector(".movie-list");
 const apiKey = "649a4725";
 
 function showMovieModal(data) {
@@ -13,7 +14,7 @@ function showMovieModal(data) {
     <img
       class="movie-poster"
       src=${data.Poster}
-      alt="Poster do filme pesquisado."
+      alt="Poster de ${data.Title}."
     />
 
     <div class="movie-info">
@@ -76,3 +77,22 @@ async function searchButtonClickHandler() {
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
+
+function addToList(movieObject) {
+  let movieList = [];
+
+  movieList.push(movieObject);
+}
+
+function updateUI(movieObject) {
+  movieListContainer.innerHTML += `<article>
+          <img
+            src="${movieObject.Poster}"
+            alt="Poster de ${movieObject.Title}."
+          />
+
+          <button class="remove-movie-button" type="button">
+            <i class="bi bi-trash"></i> Remover
+          </button>
+        </article>`;
+}
