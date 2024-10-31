@@ -6,7 +6,16 @@ const searchButton = document.getElementById("search-button");
 const movieListContainer = document.querySelector(".movie-list");
 const apiKey = "649a4725";
 
+let currentMovie = {};
+
+function addCurrentMovieToList() {
+  addToList(currentMovie);
+  updateUI(currentMovie);
+}
+
 function showMovieModal(data) {
+  currentMovie = data;
+
   modalContainer.innerHTML = `
   <h2 class="movie-title">${data.Title} - ${data.Year}</h2>
 
@@ -33,7 +42,7 @@ function showMovieModal(data) {
   </section>
 
   <section class="modal-footer">
-    <button type="button" id="add-movie-button">
+    <button type="button" onclick='{addCurrentMovieToList()}' id="add-movie-button">
       Adicionar à Lista
     </button>
   </section>`;

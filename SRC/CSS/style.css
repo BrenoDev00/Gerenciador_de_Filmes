@@ -84,13 +84,14 @@ input[type="number"] {
 }
 
 .movie-list {
-  max-width: 125rem;
+  max-width: 140rem;
   margin: 0 auto;
   margin-top: 1.8rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 2.5rem;
+  align-items: center;
 }
 
 .movie-list article {
@@ -100,6 +101,7 @@ input[type="number"] {
 }
 
 .movie-list img {
+  height: 44.7rem;
   border-radius: 0.3rem;
   border: 0.1rem solid var(--white-color);
 }
