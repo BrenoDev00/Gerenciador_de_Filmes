@@ -87,6 +87,7 @@ input[type="number"] {
   max-width: 140rem;
   margin: 0 auto;
   margin-top: 1.8rem;
+  margin-bottom: 7.63rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -210,7 +211,9 @@ input[type="number"] {
 
 /* Rodapé */
 footer {
-  margin-top: 3.12rem;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   background-color: var(--primary-color);
   color: var(--white-color);
   padding: 0.82rem 0;
