@@ -8,9 +8,52 @@ const apiKey = "649a4725";
 
 let currentMovie = {};
 
+function addToList(movieObject) {
+  let movieList = [];
+
+  movieList.push(movieObject);
+}
+
+function updateUI(movieObject) {
+  movieListContainer.innerHTML += `<article>
+          <img
+            src="${movieObject.Poster}"
+            alt="Poster de ${movieObject.Title}."
+          />
+
+          <button class="remove-movie-button" type="button">
+            <i class="bi bi-trash"></i> Remover
+          </button>
+        </article>`;
+}
+
+function closeMovieModal() {
+  modalOverlay.classList.remove("open");
+}
+
 function addCurrentMovieToList() {
   addToList(currentMovie);
   updateUI(currentMovie);
+  closeMovieModal();
+}
+
+function movieNameParameterGenerator() {
+  if (movieName.value === "") {
+    throw new Error("Informe o nome do filme");
+  }
+  return movieName.value.split(" ").join("+");
+}
+
+function movieYearParameterGenerator() {
+  if (movieYear.value === "") {
+    return "";
+  }
+
+  if (movieYear.value.length !== 4 || isNaN(Number(movieYear.value))) {
+    throw new Error("Ano do filme inválido");
+  }
+
+  return `&y=${movieYear.value}`;
 }
 
 function showMovieModal(data) {
@@ -48,25 +91,6 @@ function showMovieModal(data) {
   </section>`;
 }
 
-function movieNameParameterGenerator() {
-  if (movieName.value === "") {
-    throw new Error("Informe o nome do filme");
-  }
-  return movieName.value.split(" ").join("+");
-}
-
-function movieYearParameterGenerator() {
-  if (movieYear.value === "") {
-    return "";
-  }
-
-  if (movieYear.value.length !== 4 || isNaN(Number(movieYear.value))) {
-    throw new Error("Ano do filme inválido");
-  }
-
-  return `&y=${movieYear.value}`;
-}
-
 async function searchButtonClickHandler() {
   try {
     let url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${movieNameParameterGenerator()}&y=${movieYearParameterGenerator()}`;
@@ -86,22 +110,3 @@ async function searchButtonClickHandler() {
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
-
-function addToList(movieObject) {
-  let movieList = [];
-
-  movieList.push(movieObject);
-}
-
-function updateUI(movieObject) {
-  movieListContainer.innerHTML += `<article>
-          <img
-            src="${movieObject.Poster}"
-            alt="Poster de ${movieObject.Title}."
-          />
-
-          <button class="remove-movie-button" type="button">
-            <i class="bi bi-trash"></i> Remover
-          </button>
-        </article>`;
-}
