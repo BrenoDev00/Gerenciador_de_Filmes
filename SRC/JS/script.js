@@ -110,3 +110,9 @@ async function searchButtonClickHandler() {
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
+
+function isMovieAlreadyOnList(id){
+  function doesThisIdBelongToThisMovie(){
+
+  }
+}

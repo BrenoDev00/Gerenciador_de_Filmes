@@ -85,14 +85,14 @@ input[type="number"] {
 
 .movie-list {
   max-width: 140rem;
+  min-height: 100dvh;
   margin: 0 auto;
   margin-top: 1.8rem;
-  margin-bottom: 7.63rem;
+  margin-bottom: 3.12rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 2.5rem;
-  align-items: center;
 }
 
 .movie-list article {
@@ -211,9 +211,6 @@ input[type="number"] {
 
 /* Rodapé */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
   background-color: var(--primary-color);
   color: var(--white-color);
   padding: 0.82rem 0;
