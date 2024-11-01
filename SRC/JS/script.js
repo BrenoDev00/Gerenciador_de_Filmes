@@ -6,11 +6,11 @@ const searchButton = document.getElementById("search-button");
 const movieListContainer = document.querySelector(".movie-list");
 const apiKey = "649a4725";
 
+let movieList = [];
+
 let currentMovie = {};
 
 function addToList(movieObject) {
-  let movieList = [];
-
   movieList.push(movieObject);
 }
 
@@ -32,6 +32,11 @@ function closeMovieModal() {
 }
 
 function addCurrentMovieToList() {
+  if (isMovieAlreadyOnList(currentMovie.imdbID)) {
+    notie.alert({ type: "error", text: "Filme já está na sua lista!" });
+    return;
+  }
+
   addToList(currentMovie);
   updateUI(currentMovie);
   closeMovieModal();
@@ -102,6 +107,8 @@ async function searchButtonClickHandler() {
       throw new Error("Filme não encontrado");
     }
 
+    console.log(data);
+
     showMovieModal(data);
     modalOverlay.classList.add("open");
   } catch (error) {
@@ -111,8 +118,10 @@ async function searchButtonClickHandler() {
 
 searchButton.addEventListener("click", searchButtonClickHandler);
 
-function isMovieAlreadyOnList(id){
-  function doesThisIdBelongToThisMovie(){
-
+function isMovieAlreadyOnList(id) {
+  function doesThisIdBelongToThisMovie(movieObject) {
+    return movieObject.imdbID === id;
   }
+
+  return Boolean(movieList.find(doesThisIdBelongToThisMovie));
 }
