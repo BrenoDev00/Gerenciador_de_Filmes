@@ -10,18 +10,32 @@ let movieList = [];
 
 let currentMovie = {};
 
+function removeFilmFromList(id) {
+  movieList = movieList.filter((movie) => movie.imdbID !== id);
+
+  document.getElementById(`movie-card-${id}`).remove();
+}
+
+function isMovieAlreadyOnList(id) {
+  function doesThisIdBelongToThisMovie(movieObject) {
+    return movieObject.imdbID === id;
+  }
+
+  return Boolean(movieList.find(doesThisIdBelongToThisMovie));
+}
+
 function addToList(movieObject) {
   movieList.push(movieObject);
 }
 
 function updateUI(movieObject) {
-  movieListContainer.innerHTML += `<article>
+  movieListContainer.innerHTML += `<article id="movie-card-${movieObject.imdbID}">
           <img
             src="${movieObject.Poster}"
             alt="Poster de ${movieObject.Title}."
           />
 
-          <button class="remove-movie-button" type="button">
+          <button class="remove-movie-button" onclick="{removeFilmFromList('${movieObject.imdbID}')}" type="button">
             <i class="bi bi-trash"></i> Remover
           </button>
         </article>`;
@@ -117,11 +131,3 @@ async function searchButtonClickHandler() {
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
-
-function isMovieAlreadyOnList(id) {
-  function doesThisIdBelongToThisMovie(movieObject) {
-    return movieObject.imdbID === id;
-  }
-
-  return Boolean(movieList.find(doesThisIdBelongToThisMovie));
-}
