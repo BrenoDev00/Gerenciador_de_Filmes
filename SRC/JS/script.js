@@ -6,14 +6,24 @@ const searchButton = document.getElementById("search-button");
 const movieListContainer = document.querySelector(".movie-list");
 const apiKey = "649a4725";
 
-let movieList = [];
+let movieList = JSON.parse(localStorage.getItem("movieList")) ?? [];
 
 let currentMovie = {};
+
+function updateLocalStorage() {
+  localStorage.setItem("movieList", JSON.stringify(movieList));
+}
+
+for (const movieInfo of movieList) {
+  updateUI(movieInfo);
+}
 
 function removeFilmFromList(id) {
   movieList = movieList.filter((movie) => movie.imdbID !== id);
 
   document.getElementById(`movie-card-${id}`).remove();
+
+  updateLocalStorage();
 }
 
 function isMovieAlreadyOnList(id) {
@@ -53,6 +63,7 @@ function addCurrentMovieToList() {
 
   addToList(currentMovie);
   updateUI(currentMovie);
+  updateLocalStorage();
   closeMovieModal();
 }
 
