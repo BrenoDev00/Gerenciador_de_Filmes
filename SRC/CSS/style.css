@@ -89,6 +89,7 @@ input[type="number"] {
   margin: 0 auto;
   margin-top: 1.8rem;
   margin-bottom: 3.12rem;
+  padding: 0 1.2rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -103,8 +104,10 @@ input[type="number"] {
 
 .movie-list img {
   height: 44.7rem;
+  width: 30rem;
   border-radius: 0.3rem;
   border: 0.1rem solid var(--white-color);
+  color: white;
 }
 
 .remove-movie-button {

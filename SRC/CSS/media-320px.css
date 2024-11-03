@@ -1,0 +1,15 @@
+@media (max-width: 320px) {
+  html {
+    font-size: 45%;
+  }
+
+  /* Menu de pesquisa */
+  header {
+    gap: 0.52rem;
+  }
+
+  /* Conteúdo principal */
+  .movie-poster {
+    width: 20rem;
+  }
+}
