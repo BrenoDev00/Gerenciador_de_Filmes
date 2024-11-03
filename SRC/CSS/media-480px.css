@@ -1,0 +1,51 @@
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  /* menu de pesquisa */
+  .search-container {
+    flex-flow: column;
+  }
+
+  #movie-name,
+  #movie-year {
+    width: unset;
+    flex: 1;
+  }
+
+  #search-button {
+    border: 0.1rem solid var(--white-color);
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Conteúdo principal */
+  .main-title {
+    font-size: 2.76rem;
+  }
+
+  .movie-list img {
+    height: 40rem;
+  }
+
+  .modal-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .movie-title {
+    font-size: 2rem;
+    padding: 0;
+    padding-bottom: 1.2rem;
+  }
+
+  .modal-body {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .movie-info {
+    gap: 1.6rem;
+  }
+}
