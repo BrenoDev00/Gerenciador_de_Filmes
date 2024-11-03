@@ -1,0 +1,10 @@
+@media (max-width: 1024px) {
+  html {
+    font-size: 58%;
+  }
+
+  /* Menu de pesquisa */
+  .search-container {
+    margin-right: 0;
+  }
+}

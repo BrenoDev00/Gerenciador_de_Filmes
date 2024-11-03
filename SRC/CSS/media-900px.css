@@ -1,0 +1,6 @@
+@media (max-width: 900px) {
+  /* Menu de pesquisa */
+  #movie-name {
+    width: 30rem;
+  }
+}

@@ -1,0 +1,19 @@
+@media (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* Menu de pesquisa */
+  #movie-name {
+    width: 20rem;
+  }
+
+  #movie-year {
+    width: 15rem;
+  }
+
+  /* Conteúdo Principal */
+  .movie-poster {
+    width: 25rem;
+  }
+}
