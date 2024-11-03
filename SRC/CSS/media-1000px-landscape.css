@@ -1,0 +1,29 @@
+@media (max-width: 1000px) and (orientation: landscape) {
+  /* Conteúdo principal */
+  .modal-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .movie-title {
+    padding: 0.8rem 0 0 0;
+    font-size: 2rem;
+  }
+
+  .movie-poster {
+    width: 15rem;
+  }
+
+  .movie-info {
+    max-width: 40rem;
+  }
+
+  .movie-info,
+  #add-movie-button {
+    font-size: 1.4rem;
+  }
+
+  .modal-footer {
+    margin-top: 0.6rem;
+  }
+}
