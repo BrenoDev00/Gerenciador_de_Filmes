@@ -139,8 +139,6 @@ async function searchButtonClickHandler() {
       throw new Error("Filme não encontrado");
     }
 
-    console.log(data);
-
     showMovieModal(data);
     modalOverlay.classList.add("open");
   } catch (error) {
