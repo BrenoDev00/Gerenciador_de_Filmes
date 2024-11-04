@@ -4,6 +4,16 @@
   }
 
   /* menu de pesquisa */
+  header {
+    flex-flow: column;
+    align-items: stretch;
+    gap: 2.5rem;
+  }
+
+  #logo-name {
+    align-self: center;
+  }
+
   .search-container {
     flex-flow: column;
   }
