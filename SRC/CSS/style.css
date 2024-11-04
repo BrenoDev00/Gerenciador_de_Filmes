@@ -85,7 +85,6 @@ input[type="number"] {
 
 .movie-list {
   max-width: 140rem;
-  min-height: 100dvh;
   margin: 0 auto;
   margin-top: 1.8rem;
   margin-bottom: 3.12rem;
@@ -210,15 +209,4 @@ input[type="number"] {
 #add-movie-button:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
-}
-
-/* Rodapé */
-footer {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  padding: 0.82rem 0;
-}
-
-footer p {
-  text-align: center;
 }
