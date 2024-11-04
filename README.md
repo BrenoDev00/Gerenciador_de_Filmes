@@ -1,4 +1,5 @@
 # 🎞️ My Movies - Gerenciador de playlist de filmes
+## Link do app: https://wonderful-rolypoly-475048.netlify.app/ 
 ![Imagem do app My Movies](./My_Movies_img.png)
 ## Descrição
 - App responsável por gerenciar informações de filmes pesquisados pelo usuário. Por meio do app, é possível adicionar ou remover informações de filmes para gerenciar uma playlist personalizada.
